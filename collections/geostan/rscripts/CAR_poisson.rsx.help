@@ -1,10 +1,18 @@
-{"ALG_DESC": "Fit disease mapping models to model disease risk at small areas given counts of observed cases and sizes of populations at risk. Uses a Poisson model for case counts and the conditional autoregressive prior on the underlying disease risk. Links to the geostan R package, which employs pre-compiles Stan models.",
+{"ALG_DESC": "Model disease risk at small areas given counts of observed cases and sizes of populations at risk. Uses a Poisson model for case counts and the conditional autoregressive prior on the underlying disease risk. Links to the geostan R package, which employs pre-compiled Stan models.",
 
 "Count": "Select the field containing cases counts for the disease, or numbers of deaths if modeling mortality.",
 
-"Denominator": "Select the field containing the denominator for rates of incidence or rates of mortality; for standardized incidence ratios, this will be the expected number of cases or expected number of deaths.",
+"Denominator": "Select the field containing the denominator for rates of incidence or rates of mortality; for standardized incidence ratios, this will be the expected number of cases or expected number of deaths.\nUse raw values, not log-transformed values.",
+
+"Single_covariate": "If using a single covariate, you may select it here by name.",
+
+"Covariates_formula": "The names of covariates, if any, using R formula syntax. Write field names separated by '+', and do not quote the names. For example:\n field_name_1 + field_name_2\n You can also use transformations, for example:\nfield_name_1 + log10(field_name_2\nDo not include the offset term or the outcome variable in this formula.",
+
+"Results_folder": "File location where results will be saved.",
+
+"Results_file_ID": "A text string that will identify the results in your Results_folder. The string will be prepended to the file names.",
 
 "Layer": "Input vector layer with small area disease data",
 
-"ALG_CREATOR": "Connor Donegan [for help: https://github.com/connordonegan/geostan/issues or connor.donegan@gmail.com]"}
+"ALG_CREATOR": "Connor Donegan. Help: https://github.com/connordonegan/geostan-QGIS/issues"}
 
