@@ -1,0 +1,10 @@
+{"ALG_DESC": "Fit disease mapping models to model disease risk at small areas given counts of observed cases and sizes of populations at risk. Uses a Poisson model for case counts and the conditional autoregressive prior on the underlying disease risk. Links to the geostan R package, which employs pre-compiles Stan models.",
+
+"Count": "Select the field containing cases counts for the disease, or numbers of deaths if modeling mortality.",
+
+"Denominator": "Select the field containing the denominator for rates of incidence or rates of mortality; for standardized incidence ratios, this will be the expected number of cases or expected number of deaths.",
+
+"Layer": "Input vector layer with small area disease data",
+
+"ALG_CREATOR": "Connor Donegan [for help: https://github.com/connordonegan/geostan/issues or connor.donegan@gmail.com]"}
+
