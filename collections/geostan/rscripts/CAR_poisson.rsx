@@ -4,11 +4,9 @@
 ##Denominator=optional Field Layer
 ##Covariates=optional Field multiple Layer
 ##family=selection Normal;Poisson;Binomial
-
 ##Chains=number 4
 ##Iterations=number 2000
 ##Cores=number 1
-
 ##Save_model=selection No;Yes
 ##Results_folder=optional folder
 ##Output=output vector
