@@ -1,18 +1,18 @@
-{"ALG_DESC": "Model disease risk at small areas given counts of observed cases and sizes of populations at risk. Uses a Poisson model for case counts and the conditional autoregressive prior on the underlying disease risk. Links to the geostan R package, which employs pre-compiled Stan models.",
+{"ALG_DESC": "Spatial conditional auto-regressive model",
 
-"Count": "Select the field containing cases counts for the disease, or numbers of deaths if modeling mortality.",
+"Layer": "Input vector layer",
 
-"Denominator": "Select the field containing the denominator for rates of incidence or rates of mortality; for standardized incidence ratios, this will be the expected number of cases or expected number of deaths.\nUse raw values, not log-transformed values.",
+"Outcome": "Outcome variable.",
 
-"Single_covariate": "If using a single covariate, you may select it here by name.",
+"Denominator": "For count outcomes (like mortality or disease incidence), select the denomoinator for converting the outcome variable to a rate; for standardized incidence ratios, this will be the expected number of cases or expected number of deaths.\nUse raw values, not log-transformed values. For Poisson models, the log-denominator will be used as an offset term. The denominator is required for binomial and Poisson models, and is ignored otherwise.",
 
-"Covariates_formula": "The names of covariates, if any, using R formula syntax. Write field names separated by '+', and do not quote the names. For example:\n field_name_1 + field_name_2\n You can also use transformations, for example:\nfield_name_1 + log10(field_name_2\nDo not include the offset term or the outcome variable in this formula.",
+"Covariates": "Select covariates, if any.",
 
-"Results_folder": "File location where results will be saved.",
+"family": "Model type. Normal (Gaussian) is for continuous outcomes; Poisson is for count data with rare outcomes (such as less than 0.04); binomial models are for count data when the outcome is not rare.",
 
-"Results_file_ID": "A text string that will identify the results in your Results_folder. The string will be prepended to the file names.",
+"Save_model": "Save the geostan model itself? If 'No', a summary of model results will still be saved.",
 
-"Layer": "Input vector layer with small area disease data",
+"Results_folder": "File location where model results will be saved. A summary of the model will be printed to file and (optionally) the geostan model will also be saved here. Note that the 'Output' file path is for saving a copy of the input layer with new fields for the fitted values (as used for, e.g., disease mapping).",
 
 "ALG_CREATOR": "Connor Donegan. Help: https://github.com/connordonegan/geostan-QGIS/issues"}
 
