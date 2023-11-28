@@ -1,4 +1,4 @@
-##geostanTest=group
+##geostan=group
 ##Layer=vector polygon
 ##Outcome=Field Layer
 ##Denominator=optional Field Layer
